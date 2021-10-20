@@ -1,13 +1,13 @@
 FROM registry.redhat.io/ubi8/python-38
-RUN pip install mlflow>=1.0 \
-    && pip install azure-storage-blob==12.3.0 \
-    && pip install numpy>=1.21.2 \
+RUN pip install --upgrade pip
+RUN pip install mlflow \
+    && pip install azure-storage-blob \
+    && pip install numpy \
     && pip install scipy \
-    && pip install pandas>=1.3.3 \
-    && pip install scikit-learn==0.23.1 \
+    && pip install pandas \
+    && pip install scikit-learn \
     && pip install cloudpickle
-    && pip install psycopg2-binary==2.9.1 \
-    && pip install boto3==1.18.65 && \
-    && pip install ibm-cos-sdk
+    && pip install psycopg2-binary \
+    && pip install boto3 && \
 EXPOSE 5000
 ENTRYPOINT mlflow ui --host 0.0.0.0
