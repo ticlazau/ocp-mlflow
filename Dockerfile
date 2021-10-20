@@ -1,4 +1,5 @@
 FROM registry.redhat.io/ubi8/python-38
+
 RUN pip install --upgrade pip
 RUN pip install mlflow \
     && pip install azure-storage-blob \
