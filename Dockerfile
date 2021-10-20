@@ -8,9 +8,9 @@ RUN pip install mlflow \
     && pip install pandas \
     && pip install scikit-learn \
     && pip install cloudpickle \
-#    && pip install psycopg2-binary \
     && pip install boto3 \
-    && pip install ibm-cos-sdk
+    && pip install ibm-cos-sdk \
+    && pip install psycopg2-binary
 
 EXPOSE 5000
 ENTRYPOINT mlflow ui --host 0.0.0.0
