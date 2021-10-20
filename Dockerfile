@@ -13,4 +13,5 @@ RUN pip install mlflow==1.20.2 \
     && pip install psycopg2-binary==2.9.1
 
 EXPOSE 5000
-ENTRYPOINT mlflow ui --host 0.0.0.0
+#ENTRYPOINT mlflow ui --host 0.0.0.0
+ENTRYPOINT mlflow server --host 0.0.0.0 --backend-store-uri sqlite:///:memory --default-artifact-root ./mlruns
