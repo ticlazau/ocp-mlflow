@@ -10,7 +10,7 @@ RUN pip install mlflow \
     && pip install cloudpickle \
     && pip install boto3 \
     && pip install ibm-cos-sdk \
-    && pip install psycopg2-binary
+    && pip install psycopg2-binary==2.9.1
 
 EXPOSE 5000
 ENTRYPOINT mlflow ui --host 0.0.0.0
