@@ -8,6 +8,6 @@ RUN pip install mlflow \
     && pip install scikit-learn \
     && pip install cloudpickle
     && pip install psycopg2-binary \
-    && pip install boto3 && \
+    && pip install boto3
 EXPOSE 5000
 ENTRYPOINT mlflow ui --host 0.0.0.0
